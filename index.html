@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Daily Grind - Premium local coffee shop serving artisan coffee, fresh pastries, and community warmth in Downtown, MA.">
+    <title>The Daily Grind - Premium Local Coffee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo" role="img" aria-label="The Daily Grind logo">The Daily Grind</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#values">Values</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Visit Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="orderOnlineBtn" class="btn btn-order" aria-label="Order online">
+                    🛒 Order Online
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <section class="hero" id="home" aria-label="Hero banner">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Wake Up to Perfection</h1>
+            <p class="hero-subtitle">Artisan coffee crafted with passion, served with love</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary order-trigger" aria-label="Order online now">Order Now</button>
+                <a href="#menu" class="btn btn-secondary-outline" aria-label="Navigate to our menu section">Explore Menu</a>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+        <div class="container">
+            <h2 id="menu-title" class="section-title">Our Signature Brews</h2>
+            <p class="section-subtitle">Carefully selected, expertly roasted</p>
+            
+            <div class="menu-grid" role="list">
+                <article class="menu-item" role="listitem">
+                    <div class="menu-icon" aria-hidden="true">☕</div>
+                    <h3>Classic Espresso</h3>
+                    <p>Rich, bold, and smooth. The perfect way to start your day.</p>
+                    <span class="price" aria-label="Price: $3.50">$3.50</span>
+                </article>
+                
+                <article class="menu-item" role="listitem">
+                    <div class="menu-icon" aria-hidden="true">🥛</div>
+                    <h3>Vanilla Latte</h3>
+                    <p>Creamy steamed milk with a hint of vanilla and espresso.</p>
+                    <span class="price" aria-label="Price: $4.75">$4.75</span>
+                </article>
+                
+                <article class="menu-item" role="listitem">
+                    <div class="menu-icon" aria-hidden="true">🍂</div>
+                    <h3>Caramel Macchiato</h3>
+                    <p>Layers of espresso, vanilla, and caramel perfection.</p>
+                    <span class="price" aria-label="Price: $5.25">$5.25</span>
+                </article>
+                
+                <article class="menu-item" role="listitem">
+                    <div class="menu-icon" aria-hidden="true">❄️</div>
+                    <h3>Cold Brew</h3>
+                    <p>Smooth, refreshing, and naturally sweet cold coffee.</p>
+                    <span class="price" aria-label="Price: $4.50">$4.50</span>
+                </article>
+                
+                <article class="menu-item" role="listitem">
+                    <div class="menu-icon" aria-hidden="true">🫖</div>
+                    <h3>Chai Latte</h3>
+                    <p>Spiced tea with steamed milk and a touch of sweetness.</p>
+                    <span class="price" aria-label="Price: $4.25">$4.25</span>
+                </article>
+                
+                <article class="menu-item" role="listitem">
+                    <div class="menu-icon" aria-hidden="true">🍰</div>
+                    <h3>Fresh Pastries</h3>
+                    <p>Daily baked goods from our local bakery partners.</p>
+                    <span class="price" aria-label="Price: $3.95">$3.95</span>
+                </article>
+            </div>
+            
+            <div class="menu-cta">
+                <button id="viewMenuBtn" class="btn btn-secondary" aria-label="View our complete menu">View Full Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Menu Modal -->
+    <div id="menuModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Our Complete Menu</h2>
+                <button id="closeModal" class="close-btn" aria-label="Close menu">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Hot Coffee -->
+                <section class="menu-category">
+                    <h3 class="category-title">☕ Hot Coffee</h3>
+                    <div class="menu-items">
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Classic Espresso</h4>
+                                <p>Rich, bold espresso shot pulled to perfection</p>
+                            </div>
+                            <span class="item-price">$3.50</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Americano</h4>
+                                <p>Espresso with hot water for a smooth, full-bodied taste</p>
+                            </div>
+                            <span class="item-price">$3.75</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Cappuccino</h4>
+                                <p>Equal parts espresso, steamed milk, and foam</p>
+                            </div>
+                            <span class="item-price">$4.50</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Vanilla Latte</h4>
+                                <p>Creamy steamed milk with vanilla syrup and espresso</p>
+                            </div>
+                            <span class="item-price">$4.75</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Caramel Macchiato</h4>
+                                <p>Vanilla-flavored espresso marked with caramel drizzle</p>
+                            </div>
+                            <span class="item-price">$5.25</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Mocha</h4>
+                                <p>Rich chocolate, espresso, and steamed milk</p>
+                            </div>
+                            <span class="item-price">$5.00</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Flat White</h4>
+                                <p>Velvety microfoam with double ristretto shots</p>
+                            </div>
+                            <span class="item-price">$4.95</span>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Cold Beverages -->
+                <section class="menu-category">
+                    <h3 class="category-title">❄️ Cold Beverages</h3>
+                    <div class="menu-items">
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Cold Brew</h4>
+                                <p>Smooth, naturally sweet cold-steeped coffee</p>
+                            </div>
+                            <span class="item-price">$4.50</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Iced Latte</h4>
+                                <p>Espresso and cold milk over ice</p>
+                            </div>
+                            <span class="item-price">$4.75</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Iced Caramel Macchiato</h4>
+                                <p>Cold version of our signature drink with caramel</p>
+                            </div>
+                            <span class="item-price">$5.50</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Nitro Cold Brew</h4>
+                                <p>Cold brew infused with nitrogen for creamy texture</p>
+                            </div>
+                            <span class="item-price">$5.25</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Iced Mocha</h4>
+                                <p>Chocolate, espresso, and milk over ice</p>
+                            </div>
+                            <span class="item-price">$5.25</span>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Tea & Alternatives -->
+                <section class="menu-category">
+                    <h3 class="category-title">🫖 Tea & Alternatives</h3>
+                    <div class="menu-items">
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Chai Latte</h4>
+                                <p>Spiced black tea with steamed milk and honey</p>
+                            </div>
+                            <span class="item-price">$4.25</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Matcha Latte</h4>
+                                <p>Premium Japanese green tea with steamed milk</p>
+                            </div>
+                            <span class="item-price">$4.95</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Hot Chocolate</h4>
+                                <p>Rich dark chocolate with whipped cream</p>
+                            </div>
+                            <span class="item-price">$3.95</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Herbal Tea Selection</h4>
+                                <p>Earl Grey, English Breakfast, Chamomile, Peppermint</p>
+                            </div>
+                            <span class="item-price">$3.25</span>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Food -->
+                <section class="menu-category">
+                    <h3 class="category-title">🍰 Fresh Baked Goods</h3>
+                    <div class="menu-items">
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Croissant</h4>
+                                <p>Buttery, flaky French pastry baked fresh daily</p>
+                            </div>
+                            <span class="item-price">$3.95</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Blueberry Muffin</h4>
+                                <p>Homemade muffin packed with fresh blueberries</p>
+                            </div>
+                            <span class="item-price">$3.50</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Cinnamon Roll</h4>
+                                <p>Warm, gooey cinnamon roll with cream cheese frosting</p>
+                            </div>
+                            <span class="item-price">$4.50</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Avocado Toast</h4>
+                                <p>Smashed avocado on artisan bread with cherry tomatoes</p>
+                            </div>
+                            <span class="item-price">$7.95</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Breakfast Sandwich</h4>
+                                <p>Egg, cheese, and choice of bacon or sausage on bagel</p>
+                            </div>
+                            <span class="item-price">$6.95</span>
+                        </article>
+                        
+                        <article class="modal-menu-item">
+                            <div class="item-info">
+                                <h4>Chocolate Chip Cookie</h4>
+                                <p>Homemade cookie with premium dark chocolate chips</p>
+                            </div>
+                            <span class="item-price">$2.95</span>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Online Modal -->
+    <div id="orderModal" class="modal order-modal" role="dialog" aria-labelledby="order-modal-title" aria-modal="true" aria-hidden="true">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content order-modal-content">
+            <div class="modal-header">
+                <h2 id="order-modal-title">Order Online</h2>
+                <button id="closeOrderModal" class="close-btn" aria-label="Close order modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="order-container">
+                <div class="order-menu-section">
+                    <div class="modal-body">
+                        <!-- Hot Coffee -->
+                        <section class="menu-category">
+                            <h3 class="category-title">☕ Hot Coffee</h3>
+                            <div class="menu-items">
+                                <article class="order-item" data-name="Classic Espresso" data-price="3.50" data-category="Hot Coffee">
+                                    <div class="item-info">
+                                        <h4>Classic Espresso</h4>
+                                        <p>Rich, bold espresso shot pulled to perfection</p>
+                                        <span class="item-price">$3.50</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Classic Espresso to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Cappuccino" data-price="4.50" data-category="Hot Coffee">
+                                    <div class="item-info">
+                                        <h4>Cappuccino</h4>
+                                        <p>Equal parts espresso, steamed milk, and foam</p>
+                                        <span class="item-price">$4.50</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Cappuccino to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Vanilla Latte" data-price="4.75" data-category="Hot Coffee">
+                                    <div class="item-info">
+                                        <h4>Vanilla Latte</h4>
+                                        <p>Creamy steamed milk with vanilla syrup and espresso</p>
+                                        <span class="item-price">$4.75</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Vanilla Latte to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Caramel Macchiato" data-price="5.25" data-category="Hot Coffee">
+                                    <div class="item-info">
+                                        <h4>Caramel Macchiato</h4>
+                                        <p>Vanilla-flavored espresso marked with caramel drizzle</p>
+                                        <span class="item-price">$5.25</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Caramel Macchiato to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Mocha" data-price="5.00" data-category="Hot Coffee">
+                                    <div class="item-info">
+                                        <h4>Mocha</h4>
+                                        <p>Rich chocolate, espresso, and steamed milk</p>
+                                        <span class="item-price">$5.00</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Mocha to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Cold Beverages -->
+                        <section class="menu-category">
+                            <h3 class="category-title">❄️ Cold Beverages</h3>
+                            <div class="menu-items">
+                                <article class="order-item" data-name="Cold Brew" data-price="4.50" data-category="Cold Beverages">
+                                    <div class="item-info">
+                                        <h4>Cold Brew</h4>
+                                        <p>Smooth, naturally sweet cold-steeped coffee</p>
+                                        <span class="item-price">$4.50</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Cold Brew to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Iced Latte" data-price="4.75" data-category="Cold Beverages">
+                                    <div class="item-info">
+                                        <h4>Iced Latte</h4>
+                                        <p>Espresso and cold milk over ice</p>
+                                        <span class="item-price">$4.75</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Iced Latte to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Nitro Cold Brew" data-price="5.25" data-category="Cold Beverages">
+                                    <div class="item-info">
+                                        <h4>Nitro Cold Brew</h4>
+                                        <p>Cold brew infused with nitrogen for creamy texture</p>
+                                        <span class="item-price">$5.25</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Nitro Cold Brew to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Food -->
+                        <section class="menu-category">
+                            <h3 class="category-title">🍰 Fresh Baked Goods</h3>
+                            <div class="menu-items">
+                                <article class="order-item" data-name="Croissant" data-price="3.95" data-category="Food">
+                                    <div class="item-info">
+                                        <h4>Croissant</h4>
+                                        <p>Buttery, flaky French pastry baked fresh daily</p>
+                                        <span class="item-price">$3.95</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Croissant to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Cinnamon Roll" data-price="4.50" data-category="Food">
+                                    <div class="item-info">
+                                        <h4>Cinnamon Roll</h4>
+                                        <p>Warm, gooey cinnamon roll with cream cheese frosting</p>
+                                        <span class="item-price">$4.50</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Cinnamon Roll to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                                
+                                <article class="order-item" data-name="Avocado Toast" data-price="7.95" data-category="Food">
+                                    <div class="item-info">
+                                        <h4>Avocado Toast</h4>
+                                        <p>Smashed avocado on artisan bread with cherry tomatoes</p>
+                                        <span class="item-price">$7.95</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" aria-label="Add Avocado Toast to cart">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <span class="btn-icon">+</span>
+                                    </button>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Cart Section -->
+                <div class="cart-section" role="complementary" aria-label="Shopping cart">
+                    <h3 class="cart-title">Your Order</h3>
+                    <div id="cartItems" class="cart-items">
+                        <div class="empty-cart">
+                            <span class="empty-cart-icon">🛒</span>
+                            <p>Your cart is empty</p>
+                            <p class="empty-cart-subtitle">Add items to get started</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="cart-total">
+                            <span>Subtotal:</span>
+                            <span id="cartSubtotal" class="total-amount">$0.00</span>
+                        </div>
+                        <div class="cart-total">
+                            <span>Tax (8.5%):</span>
+                            <span id="cartTax" class="total-amount">$0.00</span>
+                        </div>
+                        <div class="cart-total cart-grand-total">
+                            <span>Total:</span>
+                            <span id="cartTotal" class="total-amount">$0.00</span>
+                        </div>
+                        
+                        <button id="checkoutBtn" class="btn btn-checkout" disabled aria-label="Proceed to checkout">
+                            Proceed to Checkout
+                        </button>
+                        
+                        <p class="pickup-info">
+                            <span aria-hidden="true">📍</span> Pickup at 123 Coffee Street, Downtown
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <section class="story" id="story" aria-labelledby="story-title">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 id="story-title" class="section-title">Our Story</h2>
+                    <p class="story-paragraph">Founded in 2015, The Daily Grind began as a dream to create more than just a coffee shop—we wanted to build a community hub where neighbors become friends and every cup tells a story.</p>
+                    <p class="story-paragraph">Our founder, Maria Santos, spent years traveling the world, learning from master roasters and baristas. She brought that knowledge home to Massachusetts, sourcing beans directly from sustainable farms and perfecting the art of the perfect brew.</p>
+                    <p class="story-paragraph">Today, we're proud to serve over 500 cups of happiness daily, support local farmers, and provide a warm, welcoming space for our community to gather, work, and connect.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Interior of The Daily Grind coffee shop showing warm ambiance, wooden furniture, and customers enjoying their coffee" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values" id="values" aria-labelledby="values-title">
+        <div class="container">
+            <h2 id="values-title" class="section-title">What Sets Us Apart</h2>
+            <p class="section-subtitle">Our commitment to excellence in every cup</p>
+            
+            <div class="values-grid">
+                <article class="value-card">
+                    <div class="value-image">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Hands holding freshly roasted coffee beans" loading="lazy">
+                    </div>
+                    <div class="value-content">
+                        <h3>Sustainably Sourced</h3>
+                        <p>We partner directly with coffee farmers who practice sustainable, ethical farming. Every bean is traceable, fair-trade, and chosen for its exceptional quality and the positive impact it creates.</p>
+                    </div>
+                </article>
+                
+                <article class="value-card">
+                    <div class="value-image">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80" alt="Professional barista carefully preparing coffee with precision" loading="lazy">
+                    </div>
+                    <div class="value-content">
+                        <h3>Expert Craftsmanship</h3>
+                        <p>Our baristas are trained artisans who understand the science and art of coffee. From precise temperature control to latte art, every detail matters in creating your perfect cup.</p>
+                    </div>
+                </article>
+                
+                <article class="value-card">
+                    <div class="value-image">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Diverse group of people socializing and enjoying coffee together" loading="lazy">
+                    </div>
+                    <div class="value-content">
+                        <h3>Community First</h3>
+                        <p>More than a coffee shop, we're your neighborhood gathering place. We host local artists, support community events, and create a space where everyone feels welcome and valued.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+            <h2 id="testimonials-title" class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real reviews from our amazing community</p>
+            
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Portrait of Sarah Johnson" loading="lazy">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars" aria-label="5 star rating" role="img">★★★★★</div>
+                        <blockquote>
+                            <p>"The Daily Grind is my sanctuary. The coffee is exceptional, but it's the warm atmosphere and friendly staff that keep me coming back every single day. It truly feels like home."</p>
+                        </blockquote>
+                        <cite>
+                            <span class="testimonial-name">Sarah Johnson</span>
+                            <span class="testimonial-title">Regular Customer</span>
+                        </cite>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Portrait of Michael Chen" loading="lazy">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars" aria-label="5 star rating" role="img">★★★★★</div>
+                        <blockquote>
+                            <p>"As a remote worker, I've tried every coffee shop in town. The Daily Grind has the best WiFi, the most comfortable seating, and hands down the finest cold brew I've ever tasted."</p>
+                        </blockquote>
+                        <cite>
+                            <span class="testimonial-name">Michael Chen</span>
+                            <span class="testimonial-title">Freelance Designer</span>
+                        </cite>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80" alt="Portrait of Emily Rodriguez" loading="lazy">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars" aria-label="5 star rating" role="img">★★★★★</div>
+                        <blockquote>
+                            <p>"I'm blown away by their commitment to sustainability and quality. You can taste the difference in every sip. Plus, the staff remembers my order—that personal touch means everything!"</p>
+                        </blockquote>
+                        <cite>
+                            <span class="testimonial-name">Emily Rodriguez</span>
+                            <span class="testimonial-title">Local Teacher</span>
+                        </cite>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us CTA Section -->
+    <section class="cta" id="contact" aria-labelledby="contact-title">
+        <div class="cta-content">
+            <h2 id="contact-title" class="cta-title">Visit Us Today</h2>
+            <p class="cta-subtitle">Experience the warmth of community and the aroma of freshly brewed coffee</p>
+            
+            <div class="location-info">
+                <article class="info-card">
+                    <div class="info-icon" aria-hidden="true">📍</div>
+                    <h3>Location</h3>
+                    <p>123 Coffee Street<br>Downtown, MA 02139</p>
+                </article>
+                
+                <article class="info-card">
+                    <div class="info-icon" aria-hidden="true">🕐</div>
+                    <h3>Hours</h3>
+                    <p><span class="sr-only">Monday through Friday:</span>Mon - Fri: 6:30 AM - 8:00 PM<br><span class="sr-only">Saturday through Sunday:</span>Sat - Sun: 7:00 AM - 9:00 PM</p>
+                </article>
+                
+                <article class="info-card">
+                    <div class="info-icon" aria-hidden="true">📞</div>
+                    <h3>Contact</h3>
+                    <p><a href="tel:+16175552739" class="contact-link" aria-label="Call us at 617-555-2739">(617) 555-BREW</a><br><a href="mailto:hello@dailygrind.coffee" class="contact-link" aria-label="Email us at hello@dailygrind.coffee">hello@dailygrind.coffee</a></p>
+                </article>
+            </div>
+            
+            <a href="https://maps.google.com" class="btn btn-secondary" aria-label="Get directions to The Daily Grind">Get Directions</a>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2025 The Daily Grind. Brewed with love in Massachusetts.</p>
+            <nav class="social-links" aria-label="Social media links">
+                <a href="https://instagram.com" aria-label="Visit our Instagram page" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://facebook.com" aria-label="Visit our Facebook page" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://twitter.com" aria-label="Visit our Twitter page" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
